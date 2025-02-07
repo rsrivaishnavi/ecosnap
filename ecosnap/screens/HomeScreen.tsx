@@ -25,6 +25,9 @@ const HomeScreen: React.FC = () => {
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Heat')}>
                 <Text style={styles.buttonText}>HeatMap</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Scan')}>
+                <Text style={styles.buttonText}>Sacn Plastic</Text>
+            </TouchableOpacity>
         </View>
     );
 };
