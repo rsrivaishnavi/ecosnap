@@ -2,12 +2,12 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../App';  // Import RootStackParamList
+import { RootStackParamList } from '../App';  
 
 type NavigationProp = StackNavigationProp<RootStackParamList, 'Landing'>;
 
 const LandingScreen: React.FC = () => {
-    const navigation = useNavigation<NavigationProp>(); // ✅ Ensure useNavigation() is inside the component
+    const navigation = useNavigation<NavigationProp>(); // 
 
     return (
         <View style={styles.container}>

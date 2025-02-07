@@ -1,7 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RootStackParamList } from '../App'; 
 
 const HomeScreen: React.FC = () => {
+      const navigation = useNavigation<StackNavigationProp<RootStackParamList, 'Home'>>();
     return (
         <View style={styles.container}>
             <Text style={styles.title}>ECO SNAP</Text>
@@ -17,6 +21,9 @@ const HomeScreen: React.FC = () => {
             </TouchableOpacity>
             <TouchableOpacity style={styles.button}>
                 <Text style={styles.buttonText}>Settings</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Heat')}>
+                <Text style={styles.buttonText}>HeatMap</Text>
             </TouchableOpacity>
         </View>
     );
